@@ -347,6 +347,10 @@ footer {
 
 
 @media (max-width: 576px) {
+
+	*{
+		font-family: -apple-system;
+	}
 	
 	article {
 		font-size: 0.9em;
