@@ -1,52 +1,37 @@
-<div class="sidebar-item sidebar-header">
-	<div class='sidebar-brand'>
-		<a href="/about/">{{ site.title }}</a>
-	</div>
-	<p class="lead">{{ site.description }}</p>
-	{%- if social.github -%}
-		<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}">
-			<svg class="svg-icon grey">
-				<use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}" />
-			</svg></a></li>
-	{%- endif -%}
-</div>
-
-<div class="sidebar-item sidebar-nav">
+<div class="sidebar-item sidebar-nav">	<!-- 프롤로그-->
 	<ul class="nav">
-      <li class="nav-title">Pages</li>
-	  <li>
-	  	<a class="nav-item" href="/">Articles</a>
-	  </li>
-	  {% assign pages_list = site.pages %}
-	  {% for node in pages_list %}
-	    {% if node.title != null %}
-	      {% if node.layout == "page" %}
-	        <li>
-	        	<a class="nav-item" href="{{ node.url }}">
-	            	{{ node.title }}
-	            </a>
-	        </li>
-	      {% endif %}
-	    {% endif %}
-	  {% endfor %}
+		<li class="nav-title">Pages</li>	<!--프롤로그명 -->
+		<li> <a class="nav-item" href="/">Articles</a> </li> <!--항목 1 -->
+		<li> <a class="nav-item" href="/about/">About</a> </li> <!--항목 2 -->
 	</ul>
 </div>
-
-<div class="sidebar-item sidebar-nav">
-  	<ul class="nav">
-			<li class="nav-title">Categories</li>
-	    {% for category in site.categories %}
-	    <li>
-	    	<a class="nav-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}">
-				<span class="name">{{ category | first }}</span>
-				<span class="badge">{{ category | last | size }}</span>
-	    	</a>
- 		</li>
-	    {% endfor %}
-	  </nav>
+<div class="sidebar-item sidebar-nav"> <!--카테고리 분류 1 -->
+	<ul class="nav">
+			<li class="nav-title">Categories</li>	<!--카테고리 분류명 -->
+		<li>
+			<a class="nav-item" href="/category/#sample"> <!--항목 1 -->
+				<span class="name">sample</span>
+				<span class="badge">1</span>
+			</a>
+		</li>
+		
+		<li>
+			<a class="nav-item" href="/category/#jekyll"> <!--항목 2 -->
+				<span class="name">jekyll</span>
+				<span class="badge">1</span>
+			</a>
+		</li>
+		
+		<li>
+			<a class="nav-item" href="/category/#update"> <!--항목 3 -->
+				<span class="name">update</span>
+				<span class="badge">1</span>
+			</a>
+		</li>
+		
+	</nav>
 	</ul>
 </div>
-
 <div class="sidebar-item sidebar-footer">
-	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+	<!-- 인스타, 메일 추가 예정 -->
 </div>
