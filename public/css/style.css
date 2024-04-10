@@ -1,6 +1,6 @@
 @import url(syntax/monokai.css);
 @font-face {
-	font-family: 'Pretendard Variable'
+	font-family: 'Pretendard Variable';
 	src: url('/font/PRETENDARDVARIABLE.TTF') format('truetype')
 }
 
@@ -36,10 +36,11 @@
 }
 
 * {
+	letter-spacing: -1px;
 	box-sizing: border-box;
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, footer, header, hgroup, main, section {
   display: block;
 }
 
@@ -81,10 +82,17 @@ code {
 	margin: 0px;
 }
 
+.logo img {
+	height: 25px;
+	width: auto;
+	margin-right: 7px;
+}
+
 .logo {
+	display: flex;
+  	align-items: center;
 	font-weight:900;
 	font-size: 25px;
-	letter-spacing: -1px;
 	color: #003348;
 }
 
@@ -156,17 +164,35 @@ code {
 	margin-top: 20px;
 }
 
+.nav {
+	margin-left: 20px;
+	list-style-position: inside;
+	list-style-type: square;
+}
+
+.nav-title img {
+	height: 30px;
+	width: auto;
+	margin-right: 7px;
+}
+
 .nav-title {
-	font-size: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 90%;
 	font-family: "Pretendard Variable";
-	border-bottom: 1px solid gray;
-	margin-bottom: 5px;
+	font-weight:bold;
+	color: #002737;
+	margin-bottom: 10px;
 }
 
 a.nav-item {
-	font-size: 120%;
-	font-family: "Pretendard";
-	color: #aaa;
+	
+	font-size: 85%;
+	font-family: 'Pretendard Variable';
+	padding-left: 10px;
+	line-height: 25px;
+	color: #6A6A6A;
 }
 
 a.nav-item:hover { color: #777; }
